@@ -12,3 +12,22 @@ SELECT * FROM albums
 -- Return albums from band_id 1, 3, or 4
 SELECT * FROM albums
     WHERE band_id IN (1, 3, 4);
+
+
+-- BONUS
+
+-- Return albums with titles starting with 'The'
+SELECT * FROM albums
+    WHERE title LIKE 'The%';
+
+
+-- Return albums with the two highest sales numbers
+SELECT * FROM albums
+    ORDER BY num_sold DESC
+    LIMIT 2;
+
+
+-- Return next two highest selling albums
+SELECT * FROM albums
+    ORDER BY num_sold DESC
+    LIMIT 2 OFFSET 2;
